@@ -26,7 +26,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <br><br><br>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        @csrf
                         <input type="file" class="form-control" name="thing" />
                         <br>
                         <input type="submit" class="btn btn-sm btn-block btn-danger" value="Upload"/>

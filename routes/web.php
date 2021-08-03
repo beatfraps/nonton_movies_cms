@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/list', function () {
+    $files = Storage::disk("google")->allFiles();
+    dd($files);
+});
+
+Route::post('/upload', function (\Illuminate\Http\Request $request) {
+    dd($request->file("thing")->store("", "google"));
+});
