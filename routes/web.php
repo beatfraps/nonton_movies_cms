@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/list', function () {
     $files = Storage::disk("google")->allFiles();
+    $url = 'test';
     dd($files);
 });
 
